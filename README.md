@@ -36,8 +36,8 @@ New-PACertificate $certNames -AcceptTOS -Plugin OpenIPAM -PluginArgs $pArgs
 
 # Scheduled Task
 The Posh-ACME module does not have a scheduled task for renewal so you will have to set something in task scheduler.  Create a powershell script and schedule it to run.  This would be a good example:
-Posh-ACME-Renew.ps1
 ```
+#Posh-ACME-Renew.ps1
 Set-PAOrder example.usu.edu
 if ($cert = Submit-Renewal) {
     # do stuff with $cert to deploy it
