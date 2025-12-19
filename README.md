@@ -1,13 +1,15 @@
 # posh-acme-openipam
 OpenIPAM plugin for Posh-ACME for Let's Encrypt certificates
 
+As an administrator do the following steps.
+
 Install the Posh-ACME powershell module:
 ```
 Install-Module -Name Posh-ACME -Scope AllUsers
 ```
 Copy the OpenIPAM.ps1 file into the Posh-ACME plugins folder:
 ```
-C:\Program Files\WindowsPowerShell\Modules\Posh-ACME\4.30.1\Plugins\OpenIPAM.ps1
+Invoke-Webrequest -Uri https://raw.githubusercontent.com/utahstate/posh-acme-openipam/main/OpenIPAM.ps1 -OutFile C:\Program Files\WindowsPowerShell\Modules\Posh-ACME\4.30.1\Plugins\OpenIPAM.ps1
 ```
 Setup your OpenIPAM API key:
 ```
