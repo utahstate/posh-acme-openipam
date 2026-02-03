@@ -7,9 +7,13 @@ Install the Posh-ACME powershell module:
 ```
 Install-Module -Name Posh-ACME -Scope AllUsers
 ```
-Copy the OpenIPAM.ps1 file into the Posh-ACME plugins folder:
+Find which version of Posh-ACME you have installed:
 ```
-Invoke-Webrequest -Uri https://raw.githubusercontent.com/utahstate/posh-acme-openipam/main/OpenIPAM.ps1 -OutFile C:\Program Files\WindowsPowerShell\Modules\Posh-ACME\4.30.1\Plugins\OpenIPAM.ps1
+$poshAcmeVersion = "$((Get-InstalledModule Posh-ACME).Version)"
+```
+Copy the OpenIPAM.ps1 file into the Posh-ACME plugins folder.:
+```
+Invoke-Webrequest -Uri https://raw.githubusercontent.com/utahstate/posh-acme-openipam/main/OpenIPAM.ps1 -OutFile "C:\Program Files\WindowsPowerShell\Modules\Posh-ACME\$($poshAcmeVersion)\Plugins\OpenIPAM.ps1"
 ```
 Setup your OpenIPAM API key:
 ```
